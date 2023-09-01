@@ -1,8 +1,14 @@
-const os = require('os');
+//npm global command, comes with node
+//npm --versinpmon
 
-//info about current user
-const user = os.userInfo();
-console.log(user)
+//local dependency - use it only in this particular project
+// npm i <packageName>
 
-//method returns the system uptime in seconds
-console.log(`The System uptime is ${os.uptime()} seconds`)
+//global dependency - use it in any project
+//npm install -g <packageName>
+
+const _ = require("lodash")
+
+const items = [1, [2, 3, [4]]]
+const newItems = _.flattenDeep(items)
+console.log(newItems)
